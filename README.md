@@ -54,3 +54,8 @@ Performance of soft-attention model was compared with that of CNN-LSTM based ima
 -- model trained using tensorflow
 -- model trained on PersonaBank corpus saved in new_persona.txt. (Preprocessed version of persona data) 
 -- train model by running char_lang_model.py in tensorflow environment.
+
+# Publication
+
+The novel idea of story generation from the hashtags for the images was accepted and published in the 2019 IEEE 35th International Conference on Data Engineering Workshops (ICDEW). (https://ieeexplore.ieee.org/abstract/document/8750908 , DOI: 10.1109/ICDEW.2019.00060 ). Title of the paper: Generation of a Short Narrative Caption for an Image Using the Suggested Hashtag
+
