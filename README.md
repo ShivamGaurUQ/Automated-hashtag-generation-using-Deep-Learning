@@ -6,26 +6,6 @@
 1. First, generate a hashtag for an input image by using attention model
 2. Second, leverage the hashtag from previous stage to produce a short story by using a character-level language model  
 
-# Hashtag generation using attention mechanism
-
-![Uploading Picture1.png…]()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Hashtag generation using Tensorflow and Pytorch
@@ -52,7 +32,7 @@
 -- train2.py is used to generate hashtags using AlexNet implemented using Keras by running in tensorflow environment.
 -- The test data results, loss_epoch (train and validation), accuracy_epoch(train and validation) readings obtained after training and validation of the model are saved in the Multi-label image classification directory.
 
-4. Character-level language model using RNN
+4. Character-level language model using RNN (to generate story from hashtag)
 
 -- model trained using tensorflow
 -- model trained on PersonaBank corpus saved in new_persona.txt. (Preprocessed version of persona data) 
