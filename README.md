@@ -27,16 +27,16 @@ The language model is trained using a standard categorical cross-entropy loss.Th
 
 Performance of soft-attention model was compared with that of CNN-LSTM based image captioning model and multi-label image classifier. BLEU-N and ROGUE-L scores were used to evaluate the model peformance. 
 
-1. Hashtags generation using soft-attention model (Show, Attend Tell)(Tensorflow implementation)
+1. Hashtags generation using soft-attention model (Show, attend and tell)(Tensorflow implementation)
 
 -- Harrison dataset is used which is preprocessed and split into (80:10:10) train/validation/test ratio by preprocess.py file
--- Soft-attention model is trained using tensorflow_attention.py in the Show, attend and Tell (Soft Attention) directory.
+-- Soft-attention model is trained using tensorflow_attention.py in the Show, attend and tell (Soft Attention) directory.
 -- The code in the tensorflow_attention.py is adapted from "https://github.com/tensorflow/docs/blob/master/site/en/r2/tutorials/text/image_captioning.ipynb"
 -- The test data results, loss_epoch, perplexity_epoch readings obtained from the after training the model are saved in the directory Show, attend and Tell (Soft Attention) directory.
 -- The model requires Keras, Tensorflow and Python 3.6 to train. The requirements can be installed in anaconda environment using environment_tensorflow.yaml
 
 
-2.  Hashtags generation using CNN-LSTM based model (Show and Tell)(Pytorch)
+2.  Hashtags generation using CNN-LSTM based model (Show and tell)(Pytorch)
 
 -- Harrison dataset is used which is preprocessed and split into (80:10:10) train/validation/test ratio by preprocess.py file
 -- CNN-LSTM model (defined in model.py) is used to train the model using train.py in the Show and tell directory.
