@@ -4,7 +4,7 @@
 3. More details about the project are included in the 'Overview.pdf'
 
 # Methodology
-1. First, generate hashtags for an input image by using attention model.
+1. First, generate hashtags for an input image by using soft-attention model.
 
 Attention mechanism focusses on important features of the image. Image features are extracted from lower CNN layers (ENCODER). The decoder uses a LSTM that is responsible for producing a hashtag (one word) at each time step t, which is conditioned on a context vector zt, the previous hidden state ht and the previously generated hashtag. Soft attention mechanism is used to generate hashtags. 
 
@@ -23,9 +23,11 @@ The language model is trained using a standard categorical cross-entropy loss.Th
 
 
 
-# Hashtag generation using Tensorflow and Pytorch
+# Model evaluation
 
-1. Hashtags generation using soft attention model (Show, Attend Tell)(Tensorflow)
+Performance of soft-attention model was compared with that of CNN-LSTM based image captioning model and multi-label image classifier. BLEU-N and ROGUE-L scores were used to evaluate the model peformance. 
+
+1. Hashtags generation using soft-attention model (Show, Attend Tell)(Tensorflow implementation)
 
 -- Harrison dataset is used which is preprocessed and split into (80:10:10) train/validation/test ratio by preprocess.py file
 -- Soft-attention model is trained using tensorflow_attention.py in the Show, attend and Tell (Soft Attention) directory.
@@ -34,7 +36,7 @@ The language model is trained using a standard categorical cross-entropy loss.Th
 -- The model requires Keras, Tensorflow and Python 3.6 to train. The requirements can be installed in anaconda environment using environment_tensorflow.yaml
 
 
-2.  To generate hashtags using soft attention model (Show, Attend Tell)(Pytorch)
+2.  Hashtags generation using CNN-LSTM based model (Show and Tell)(Pytorch)
 
 -- Harrison dataset is used which is preprocessed and split into (80:10:10) train/validation/test ratio by preprocess.py file
 -- CNN-LSTM model (defined in model.py) is used to train the model using train.py in the Show and tell directory.
@@ -42,12 +44,12 @@ The language model is trained using a standard categorical cross-entropy loss.Th
 -- The code is adapted from "https://github.com/yunjey/pytorch-tutorial/tree/master/tutorials/03-advanced/image_captioning"
 -- Requires PyTorch setup which can be done by creating a pytorch environment using environment_pytorch.yaml
 
-3. To generate hashtags using Multi-label image classification
+3. Hashtags generation using Multi-label image classification
 
 -- train2.py is used to generate hashtags using AlexNet implemented using Keras by running in tensorflow environment.
 -- The test data results, loss_epoch (train and validation), accuracy_epoch(train and validation) readings obtained after training and validation of the model are saved in the Multi-label image classification directory.
 
-4. Character-level language model using RNN (to generate story from hashtag)
+4. Story generation using Character-level language model
 
 -- model trained using tensorflow
 -- model trained on PersonaBank corpus saved in new_persona.txt. (Preprocessed version of persona data) 
