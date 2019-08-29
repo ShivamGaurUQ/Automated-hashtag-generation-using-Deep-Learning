@@ -1,11 +1,25 @@
 # Overview
-1. Generate hashtags for Instagram images using soft-attention mechanism.
+1. Generate hashtags for Instagram images using soft-attention mechanism as described in the paper Show, Attend and Tell: Neural Image Caption Generation with Visual Attention.(https://arxiv.org/abs/1502.03044)
 2. Explore the possibility of using the hashtags to generate narrative caption for the image.
 3. More details about the project are included in the 'Overview.pdf'
 
 # Methodology
-1. First, generate a hashtag for an input image by using attention model
-2. Second, leverage the hashtag from previous stage to produce a short story by using a character-level language model  
+1. First, generate hashtags for an input image by using attention model.
+
+Attention mechanism focusses on important features of the image. Image features are extracted from lower CNN layers (ENCODER). The decoder uses a LSTM that is responsible for producing a hashtag (one word) at each time step t, which is conditioned on a context vector zt, the previous hidden state ht and the previously generated hashtag. Soft attention mechanism is used to generate hashtags. 
+
+The entire network was trained from end-to-end. InceptionV3 (pretrained on Imagenet) was used to classify images in the HARRISON dataset and features were extracted from the last convolutional layer.To generate hashtags, the CNN-LSTM model with embedding dimension size of 256, 512 GRU(LSTM) units and Adam optimizer was trained for 40 epochs on a GEForce GTX Titan GPU with each epoch taking about 2.5 hours.
+The model was trained on 80 percent of data (around 43K images) while the remaining was used for testing.
+
+
+2. Second, leverage the hashtag from previous stage to produce a short story by using a character-level language model.
+
+The character - level RNN model is trained on ‘PersonaBank’ corpus which is a collection of 108 personal narratives from various weblogs. The corpus is described in the paper: PersonaBank: A Corpus of Personal Narratives and Their Story Intention Graphs (https://arxiv.org/abs/1708.09082). These stories cover a wide range of topics from romance and wildlife to travel and sports.
+Out of 108 stories, 55 are positive stories while the remaining are negative. Average length of story in the corpus is 269 words.
+
+The language model is trained using a standard categorical cross-entropy loss.The language model was trained for 100 epochs with word embedding dimension size of 1024, 2 LSTM layers, softmax activation function, RMSProp optimizer and a learning rate of 0.01on a GEForce GTX Titan GPU to generate stories with 500 characters in length.
+
+
 
 
 
