@@ -1,7 +1,7 @@
 # Overview
 1. Generate hashtags for Instagram images using soft-attention mechanism as described in the paper Show, Attend and Tell: Neural Image Caption Generation with Visual Attention.(https://arxiv.org/abs/1502.03044)
 2. Explore the possibility of using the hashtags to generate narrative caption for the image.
-3. More details about the project are included in the 'Overview.pdf'
+3. More details about the project are included in the 'Overview_and_Results.pdf'
 
 # Methodology
 1. First, generate hashtags for an input image by using soft-attention model.
