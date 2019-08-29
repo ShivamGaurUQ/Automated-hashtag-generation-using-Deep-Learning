@@ -1,6 +1,7 @@
 # Overview
 1. Generate hashtags for Instagram images using soft-attention mechanism.
 2. Explore the possibility of using the hashtags to generate narrative caption for the image.
+3. More details about the project are included in the 'Overview.pdf'
 
 # Methodology
 1. First, generate a hashtag for an input image by using attention model
