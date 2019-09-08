@@ -24,7 +24,7 @@ Source: Adapted from [3]
 The entire network was trained from end-to-end. InceptionV3 (pretrained on Imagenet) was used to classify images in the HARRISON dataset and features were extracted from the last convolutional layer.To generate hashtags, the CNN-LSTM model with embedding dimension size of 256, 512 GRU(LSTM) units and Adam optimizer was trained for 40 epochs on a GEForce GTX Titan GPU with each epoch taking about 2.5 hours.
 The model was trained on 80 percent of data (around 43K images) while the remaining was used for testing.
 
-![](Images/train1.png)
+![](Images/train1..png)
 Summary of the training details for the soft-attention model used for hashtag generation.
 
 
