@@ -133,3 +133,36 @@ Another objective of the work was to explore the possibility of using hashtags t
 
 As mentioned earlier the work is far enough from meeting the high expectations, but lessons learnt while implementing the work are precious and will form the base to incorporate improvements in the future. One of the most important lessons learnt is that without image attributes, it is not easy to produce narrative captions that can match the context of the image. For example, one useful approach can use image features extracted from CNN during the process of story generation with word-level language model instead of the character-level language model. Another useful technique would be to use skip-thought vectors, which uses an encoder to encode sentences and then the decoder predicts the previous and next sentence based on the input sentence. Generating sentences in such a way helps in producing highly contextual and meaningful text.
 
+# References
+
+[1] S. Bai and S. An, “A survey on automatic image caption generation,” Neurocomputing, vol. 311, pp. 291-304, 2018.
+[2] N. Newhall, “THE CAPTION: THE MUTUAL RELATION OF WORDS / PHOTOGRAPHS,” Aperture, vol. 1, pp. 17-29, 1952.
+[3] G. Srivastava and R. Srivastava, “A Survey on Automatic Image Captioning,” in Springer, Singapore, 2018.
+[4] A. Karpathy, “Connecting images and natural language,” Stanford University, Dept. of Computer Science., Stanford, 2016.
+[5] T. Kim, M.-O. Heo, S. Son, K.-W. Park and B.-T. Zhang, “GLocal Attention Cascading Networks for Multi-image Cued Story Generation,” arXiv.org, 2019.
+[6] C. Lee and D. Chau, “Language as pride, love, and hate: Archiving emotions through multilingual Instagram hashtags,” Discourse, Context & Media, vol. 22, pp. 21-29, 2018.
+[7] E. Denton, J. Weston, M. Paluri, L. Bourdev and R. Fergus, “User Conditional Hashtag Prediction for Images,” in Proceedings of the 21th ACM SIGKDD International Conference on knowledge discovery and data mining, 2015.
+[8] O. Vinyals, A. Toshev, S. Bengio and D. Erhan, “Show and Tell: A Neural Image Caption Generator,” in IEEE Conference on Computer Vision and Pattern Recognition, 2015.
+[9] I. Sutskever, J. Martens and J. Hinton, “Generating Text with Recurrent Neural Networks,” in Proceedings of the 28 th International Conference, Bellevue, WA, USA, 2011.
+[10] M. Park, H. Li and J. Kim, “HARRISON: A Benchmark on HAshtag Recommendation for Real-  world Images in Social Networks.,” ArXiv.org, 2016.
+[11] M. S. Lukin, K. Bowden, C. Barackman and A. M. Walker, “PersonaBank: A Corpus of Personal  Narratives and Their Story Intention Graphs,” arXiv.org, 2017.
+[12] S. Marsland, “ Neurons, Neural Networks,and Linear Discriminants,” in Machine Learning : An  Algorithmic Perspective, CRC Press LLC, 2014, pp. 39-70.
+[13] M. Alom, T. Taha, C. Yakopcic, S. Westberg, P. Sidike, B. Van Esesn, A. Awwal and V. Asari, “The History Began from AlexNet: A Comprehensive Survey on Deep Learning Approaches,”
+arXiv.org, 2018.
+[14] Y. Lecun, Y. Bengio and G. Hinton, “Deep learning,” Nature, vol. 521(7553), p. 436, 2015.
+[15] H. Salehinejad, S. Sankar, J. Barfett, E. Colak and S. Valaee, “Recent Advances in Recurrent  Neural Networks,” arXiv.org, 2018.
+[16] K. Xu, J. Ba, R. Kiros, K. Cho, A. Courville, R. Salakhutdinov, R. Zemel and Y. Bengio, “Show, Attend and Tell: Neural Image Caption Generation with Visual Attention,” arXiv.org, 2016.
+[17] K. Papineni, S. Roukos, T. Ward and W.-J. Zhu, “BLEU: a Method for Automatic Evaluation of  Machine Translation,” in Proceedings of the 40th Annual Meeting of the Association for
+Computational Linguistics (ACL), Philadelphia, 2002.
+[18]X. Chen, H. Fang, L. Tsung-Yi, R. Vedantam, S. Gupta, P. Dollar and C. Zitnick, “Microsoft COCO Captions: Data Collection and Evaluation Server,” arXiv.org, 2015.
+[19] D. Kingma and J. Ba, “ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION,” arXiv.org, 2017.
+[20] “tf.nn.sparse_softmax_cross_entropy_with_logits,” TensorFlow, [Online]. Available: https://www.tensorflow.org/api_docs/python/tf/nn/sparse_softmax_cross_entropy_with_logi
+ts. [Accessed 09 June 2019].
+[21] Y. Bengio, R. Ducharme, P. Vincent and C. Jauvin, “A Neural Probabilistic Language Model,”
+Journal of Machine Learning Research, vol. 3(6), pp. 1137-1155, 2003.
+[22] X. Wang, W. Chen and W. Yuan-Fang, “No Metrics Are Perfect: Adversarial Reward Learning for
+Visual Storytelling,” arXiv.org, 2018.
+[23] C. C. Park, B. Kim and G. Kim, “Attend to You: Personalized Image Captioning with Context Sequence Memory Networks,” in 2017 IEEE Conference on Computer Vision and Pattern
+Recognition, 2017.
+[24] F. Ting-Hao, N. Huang, I. Ferraro, A. Mostafazadeh, J. Misra, R. Agrawal, X. Devlin, P. Girshick, ] D. He, C. Kohli, D. Batra, L. Zitnick, M. Parikh, M. Vanderwende and M. Galley, “Visual Storytelling,” arXiv.org, 2016.
+[25] D. Gonzalez-Rico and G. Fuentes-Pineda, “Contextualize, Show and Tell: A Neural Visual Storyteller,” arXiv.org, 2018.
