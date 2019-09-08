@@ -77,6 +77,9 @@ Soft-attention model performance evaluation through the plot of BLEU-N score ver
 -- The code is adapted from "https://github.com/yunjey/pytorch-tutorial/tree/master/tutorials/03-advanced/image_captioning"
 -- Requires PyTorch setup which can be done by creating a pytorch environment using environment_pytorch.yaml
 
+![](Images/allBleu2.png)
+Show and Tell model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
+
 3. Hashtags generation using Multi-label image classification
 
 -- train2.py is used to generate hashtags using AlexNet implemented using Keras by running in tensorflow environment.
