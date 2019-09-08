@@ -52,6 +52,8 @@ The language model is trained using a standard categorical cross-entropy loss.Th
 
 Performance of soft-attention model was compared with that of CNN-LSTM based image captioning model and multi-label image classifier. BLEU-N and ROGUE-L scores were used to evaluate the model peformance. 
 
+![](Images/bleu.png)
+
 1. Hashtags generation using soft-attention model (Show, attend and tell)(Tensorflow implementation)
 
 -- Harrison dataset is used which is preprocessed and split into (80:10:10) train/validation/test ratio by preprocess.py file
