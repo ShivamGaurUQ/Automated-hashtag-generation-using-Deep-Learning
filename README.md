@@ -10,7 +10,7 @@
 Source: Adapted from [3]
 
 
-1. First, generate hashtags for an input image by using soft-attention model.
+- First, generate hashtags for an input image by using soft-attention model.
 
 Attention mechanism focusses on important features of the image. The model takes an image I as input and produces a one-hot encoded list of hashtags denoted by X where |X| >= 1 and X = {x1, x2, x3, x4........, xN}, such that xi ∈ RK [3]. K is the size of the vocabulary and N is the number of hashtags generated for the image.
 
@@ -30,7 +30,7 @@ The model was trained on 80 percent of data (around 43K images) while the remain
 Summary of the training details for the soft-attention model used for hashtag generation.
 
 
-2. Second, leverage the hashtag from previous stage to produce a short story by using a character-level language model.
+- Second, leverage the hashtag from previous stage to produce a short story by using a character-level language model.
 
 ![](Images/charRnn.png)
 Source: Adapted from [6]
@@ -63,7 +63,7 @@ Performance of soft-attention model was compared with that of CNN-LSTM based ima
 - Harrison dataset is used which is preprocessed and split into (80:10:10) train/validation/test ratio by preprocess.py file
 - Soft-attention model is trained using tensorflow_attention.py in the Show, attend and tell (Soft Attention) directory.
 - The code in the tensorflow_attention.py is adapted from "https://github.com/tensorflow/docs/blob/master/site/en/r2/tutorials/text/image_captioning.ipynb"
-- The test data results, loss_epoch, perplexity_epoch readings obtained from the after training the model are saved in the directory Show, attend and Tell (Soft Attention) directory.
+- The test data results, loss_epoch, perplexity_epoch readings obtained from the after training the model are saved in the Show, attend and Tell (Soft Attention) directory.
 - The model requires Keras, Tensorflow and Python 3.6 to train. The requirements can be installed in anaconda environment using environment_tensorflow.yaml
 
 ![](Images/loss.png)
@@ -76,11 +76,11 @@ Soft-attention model performance evaluation through the plot of BLEU-N score ver
 
 ## 2.  Hashtags generation using CNN-LSTM based model (Show and tell)(Pytorch)
 
--- Harrison dataset is used which is preprocessed and split into (80:10:10) train/validation/test ratio by preprocess.py file
--- CNN-LSTM model (defined in model.py) is used to train the model using train.py in the Show and tell directory.
--- Run build_vocab.py --> train.py to train the model. Run sample.py to generate test data results.
--- The code is adapted from "https://github.com/yunjey/pytorch-tutorial/tree/master/tutorials/03-advanced/image_captioning"
--- Requires PyTorch setup which can be done by creating a pytorch environment using environment_pytorch.yaml
+- Harrison dataset is used which is preprocessed and split into (80:10:10) train/validation/test ratio by preprocess.py file
+- CNN-LSTM model (defined in model.py) is used to train the model using train.py in the Show and tell directory.
+- Run build_vocab.py --> train.py to train the model. Run sample.py to generate test data results.
+- The code is adapted from "https://github.com/yunjey/pytorch-tutorial/tree/master/tutorials/03-advanced/image_captioning"
+- Requires PyTorch setup which can be done by creating a pytorch environment using environment_pytorch.yaml
 
 ![](Images/allBleu2.png)
 Show and Tell model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
@@ -88,8 +88,8 @@ Show and Tell model performance evaluation through the plot of BLEU-N score vers
 
 ## 3. Hashtags generation using Multi-label image classification
 
--- train2.py is used to generate hashtags using AlexNet implemented using Keras by running in tensorflow environment.
--- The test data results, loss_epoch (train and validation), accuracy_epoch(train and validation) readings obtained after training and validation of the model are saved in the Multi-label image classification directory.
+- train2.py is used to generate hashtags using AlexNet implemented using Keras by running in tensorflow environment.
+- The test data results, loss_epoch (train and validation), accuracy_epoch(train and validation) readings obtained after training and validation of the model are saved in the Multi-label image classification directory.
 
 ![](Images/allBleu3.png)
 AlexNet model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
@@ -97,27 +97,27 @@ AlexNet model performance evaluation through the plot of BLEU-N score versus the
 
 ## 4. Story generation using Character-level language model
 
--- model trained using tensorflow
--- model trained on PersonaBank corpus saved in new_persona.txt. (Preprocessed version of persona data) 
--- train model by running char_lang_model.py in tensorflow environment.
+- model trained using tensorflow
+- model trained on PersonaBank corpus saved in new_persona.txt. (Preprocessed version of persona data) 
+- train model by running char_lang_model.py in tensorflow environment.
 
 
 # Results
 
-![](Images/Results1.png)
-Examples of hashtags predicted by the soft-attention model.
+- ![](Images/Results1.png)
+  Examples of hashtags predicted by the soft-attention model.
 
-![](Images/Results2.png)
-![](Images/Results3.png)
-Examples of narrative captions generated from the hashtag.
+- ![](Images/Results2.png)
+- ![](Images/Results3.png)
+  Examples of narrative captions generated from the hashtag.
 
 
 # Performance on MS COCO dataset
 
 Though the main objective of this work is to use the soft-attention mechanism to generate hashtags and explore if it is possible to generate meaningful paragraph style captions for the image, it would not be a bad idea indeed to know how the model fairs in producing sentence level captions instead as originally the model was developed to generate sentence level captions. Hence, to evaluate this capability of the soft-attention mechanism, the model was trained on the popular MSCOCO dataset. The data was processed and trained in the same way as mentioned earlier. The only difference is that due to huge size of the MSCOCO dataset, the dataset size was reduced to 10000 images and the model was only trained for 5 epochs.
 
-![](Images/Results4.png)
-Performance of soft-attention model on MSCOCO dataset.
+- ![](Images/Results4.png)
+  Performance of soft-attention model on MSCOCO dataset.
 
 
 
