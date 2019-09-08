@@ -58,7 +58,7 @@ Performance of soft-attention model was compared with that of CNN-LSTM based ima
 ![](Images/bleu.png)
 
 
-1. Hashtags generation using soft-attention model (Show, attend and tell)(Tensorflow implementation)
+## 1. Hashtags generation using soft-attention model (Show, attend and tell)(Tensorflow implementation)
 
 -- Harrison dataset is used which is preprocessed and split into (80:10:10) train/validation/test ratio by preprocess.py file
 -- Soft-attention model is trained using tensorflow_attention.py in the Show, attend and tell (Soft Attention) directory.
@@ -74,7 +74,7 @@ Training Loss vs Epoch curve
 Soft-attention model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
 
 
-2.  Hashtags generation using CNN-LSTM based model (Show and tell)(Pytorch)
+## 2.  Hashtags generation using CNN-LSTM based model (Show and tell)(Pytorch)
 
 -- Harrison dataset is used which is preprocessed and split into (80:10:10) train/validation/test ratio by preprocess.py file
 -- CNN-LSTM model (defined in model.py) is used to train the model using train.py in the Show and tell directory.
@@ -86,7 +86,7 @@ Soft-attention model performance evaluation through the plot of BLEU-N score ver
 Show and Tell model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
 
 
-3. Hashtags generation using Multi-label image classification
+## 3. Hashtags generation using Multi-label image classification
 
 -- train2.py is used to generate hashtags using AlexNet implemented using Keras by running in tensorflow environment.
 -- The test data results, loss_epoch (train and validation), accuracy_epoch(train and validation) readings obtained after training and validation of the model are saved in the Multi-label image classification directory.
@@ -95,7 +95,7 @@ Show and Tell model performance evaluation through the plot of BLEU-N score vers
 AlexNet model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
 
 
-4. Story generation using Character-level language model
+## 4. Story generation using Character-level language model
 
 -- model trained using tensorflow
 -- model trained on PersonaBank corpus saved in new_persona.txt. (Preprocessed version of persona data) 
@@ -136,33 +136,50 @@ As mentioned earlier the work is far enough from meeting the high expectations, 
 # References
 
 [1] S. Bai and S. An, “A survey on automatic image caption generation,” Neurocomputing, vol. 311, pp. 291-304, 2018.
+
 [2] N. Newhall, “THE CAPTION: THE MUTUAL RELATION OF WORDS / PHOTOGRAPHS,” Aperture, vol. 1, pp. 17-29, 1952.
+
 [3] G. Srivastava and R. Srivastava, “A Survey on Automatic Image Captioning,” in Springer, Singapore, 2018.
+
 [4] A. Karpathy, “Connecting images and natural language,” Stanford University, Dept. of Computer Science., Stanford, 2016.
+
 [5] T. Kim, M.-O. Heo, S. Son, K.-W. Park and B.-T. Zhang, “GLocal Attention Cascading Networks for Multi-image Cued Story Generation,” arXiv.org, 2019.
+
 [6] C. Lee and D. Chau, “Language as pride, love, and hate: Archiving emotions through multilingual Instagram hashtags,” Discourse, Context & Media, vol. 22, pp. 21-29, 2018.
+
 [7] E. Denton, J. Weston, M. Paluri, L. Bourdev and R. Fergus, “User Conditional Hashtag Prediction for Images,” in Proceedings of the 21th ACM SIGKDD International Conference on knowledge discovery and data mining, 2015.
+
 [8] O. Vinyals, A. Toshev, S. Bengio and D. Erhan, “Show and Tell: A Neural Image Caption Generator,” in IEEE Conference on Computer Vision and Pattern Recognition, 2015.
+
 [9] I. Sutskever, J. Martens and J. Hinton, “Generating Text with Recurrent Neural Networks,” in Proceedings of the 28 th International Conference, Bellevue, WA, USA, 2011.
+
 [10] M. Park, H. Li and J. Kim, “HARRISON: A Benchmark on HAshtag Recommendation for Real-  world Images in Social Networks.,” ArXiv.org, 2016.
+
 [11] M. S. Lukin, K. Bowden, C. Barackman and A. M. Walker, “PersonaBank: A Corpus of Personal  Narratives and Their Story Intention Graphs,” arXiv.org, 2017.
+
 [12] S. Marsland, “ Neurons, Neural Networks,and Linear Discriminants,” in Machine Learning : An  Algorithmic Perspective, CRC Press LLC, 2014, pp. 39-70.
-[13] M. Alom, T. Taha, C. Yakopcic, S. Westberg, P. Sidike, B. Van Esesn, A. Awwal and V. Asari, “The History Began from AlexNet: A Comprehensive Survey on Deep Learning Approaches,”
-arXiv.org, 2018.
+
+[13] M. Alom, T. Taha, C. Yakopcic, S. Westberg, P. Sidike, B. Van Esesn, A. Awwal and V. Asari, “The History Began from AlexNet: A Comprehensive Survey on Deep Learning Approaches,”arXiv.org, 2018.
+
 [14] Y. Lecun, Y. Bengio and G. Hinton, “Deep learning,” Nature, vol. 521(7553), p. 436, 2015.
+
 [15] H. Salehinejad, S. Sankar, J. Barfett, E. Colak and S. Valaee, “Recent Advances in Recurrent  Neural Networks,” arXiv.org, 2018.
+
 [16] K. Xu, J. Ba, R. Kiros, K. Cho, A. Courville, R. Salakhutdinov, R. Zemel and Y. Bengio, “Show, Attend and Tell: Neural Image Caption Generation with Visual Attention,” arXiv.org, 2016.
-[17] K. Papineni, S. Roukos, T. Ward and W.-J. Zhu, “BLEU: a Method for Automatic Evaluation of  Machine Translation,” in Proceedings of the 40th Annual Meeting of the Association for
-Computational Linguistics (ACL), Philadelphia, 2002.
+
+[17] K. Papineni, S. Roukos, T. Ward and W.-J. Zhu, “BLEU: a Method for Automatic Evaluation of  Machine Translation,” in Proceedings of the 40th Annual Meeting of the Association forComputational Linguistics (ACL), Philadelphia, 2002.
 [18]X. Chen, H. Fang, L. Tsung-Yi, R. Vedantam, S. Gupta, P. Dollar and C. Zitnick, “Microsoft COCO Captions: Data Collection and Evaluation Server,” arXiv.org, 2015.
+
 [19] D. Kingma and J. Ba, “ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION,” arXiv.org, 2017.
-[20] “tf.nn.sparse_softmax_cross_entropy_with_logits,” TensorFlow, [Online]. Available: https://www.tensorflow.org/api_docs/python/tf/nn/sparse_softmax_cross_entropy_with_logi
-ts. [Accessed 09 June 2019].
-[21] Y. Bengio, R. Ducharme, P. Vincent and C. Jauvin, “A Neural Probabilistic Language Model,”
-Journal of Machine Learning Research, vol. 3(6), pp. 1137-1155, 2003.
-[22] X. Wang, W. Chen and W. Yuan-Fang, “No Metrics Are Perfect: Adversarial Reward Learning for
-Visual Storytelling,” arXiv.org, 2018.
-[23] C. C. Park, B. Kim and G. Kim, “Attend to You: Personalized Image Captioning with Context Sequence Memory Networks,” in 2017 IEEE Conference on Computer Vision and Pattern
-Recognition, 2017.
+
+[20] “tf.nn.sparse_softmax_cross_entropy_with_logits,” TensorFlow, [Online]. Available:https://www.tensorflow.org/api_docs/python/tf/nn/sparse_softmax_cross_entropy_with_logits. [Accessed 09 June 2019].
+
+[21] Y. Bengio, R. Ducharme, P. Vincent and C. Jauvin, “A Neural Probabilistic Language Model,”Journal of Machine Learning Research, vol. 3(6), pp. 1137-1155, 2003.
+
+[22] X. Wang, W. Chen and W. Yuan-Fang, “No Metrics Are Perfect: Adversarial Reward Learning for Visual Storytelling,” arXiv.org, 2018.
+
+[23] C. C. Park, B. Kim and G. Kim, “Attend to You: Personalized Image Captioning with Context Sequence Memory Networks,” in 2017 IEEE Conference on Computer Vision and Pattern Recognition, 2017.
+
 [24] F. Ting-Hao, N. Huang, I. Ferraro, A. Mostafazadeh, J. Misra, R. Agrawal, X. Devlin, P. Girshick, ] D. He, C. Kohli, D. Batra, L. Zitnick, M. Parikh, M. Vanderwende and M. Galley, “Visual Storytelling,” arXiv.org, 2016.
+
 [25] D. Gonzalez-Rico and G. Fuentes-Pineda, “Contextualize, Show and Tell: A Neural Visual Storyteller,” arXiv.org, 2018.
