@@ -116,7 +116,7 @@ Performance of soft-attention model was compared with that of CNN-LSTM based ima
 
 Though the main objective of this work is to use the soft-attention mechanism to generate hashtags and explore if it is possible to generate meaningful paragraph style captions for the image, it would not be a bad idea indeed to know how the model fairs in producing sentence level captions instead as originally the model was developed to generate sentence level captions. Hence, to evaluate this capability of the soft-attention mechanism, the model was trained on the popular MSCOCO dataset. The data was processed and trained in the same way as mentioned earlier. The only difference is that due to huge size of the MSCOCO dataset, the dataset size was reduced to 10000 images and the model was only trained for 5 epochs.
 
-- ![](Images/Results4.png)
+![](Images/Results4.png)
   <p align="center"> Performance of soft-attention model on MSCOCO dataset.</p>
 
 
