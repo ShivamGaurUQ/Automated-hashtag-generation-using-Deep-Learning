@@ -9,6 +9,7 @@
 ![](Images/hashtag_process.png)
 Source: Adapted from [3]
 
+
 1. First, generate hashtags for an input image by using soft-attention model.
 
 Attention mechanism focusses on important features of the image. The model takes an image I as input and produces a one-hot encoded list of hashtags denoted by X where |X| >= 1 and X = {x1, x2, x3, x4........, xN}, such that xi ∈ RK [3]. K is the size of the vocabulary and N is the number of hashtags generated for the image.
@@ -21,6 +22,7 @@ Image features are extracted from lower CNN layers (ENCODER). The decoder uses a
 <img src="Images/encoder.png" width="500">
 Source: Adapted from [3]
 
+
 The entire network was trained from end-to-end. InceptionV3 (pretrained on Imagenet) was used to classify images in the HARRISON dataset and features were extracted from the last convolutional layer.To generate hashtags, the CNN-LSTM model with embedding dimension size of 256, 512 GRU(LSTM) units and Adam optimizer was trained for 40 epochs on a GEForce GTX Titan GPU with each epoch taking about 2.5 hours.
 The model was trained on 80 percent of data (around 43K images) while the remaining was used for testing.
 
@@ -32,6 +34,7 @@ Summary of the training details for the soft-attention model used for hashtag ge
 
 ![](Images/charRnn.png)
 Source: Adapted from [6]
+
 
 The RNN models the probability distribution of the characters in sequence given a sequence of previous characters [7].The hashtag generated in phase 1 is chosen as seed text and using the character sequences of this seed text, new characters are generated in sequence.The model is trained to generate narratives by adopting the writing style in the corpus using the hashtag.
 
@@ -54,6 +57,7 @@ Performance of soft-attention model was compared with that of CNN-LSTM based ima
 
 ![](Images/bleu.png)
 
+
 1. Hashtags generation using soft-attention model (Show, attend and tell)(Tensorflow implementation)
 
 -- Harrison dataset is used which is preprocessed and split into (80:10:10) train/validation/test ratio by preprocess.py file
@@ -64,6 +68,7 @@ Performance of soft-attention model was compared with that of CNN-LSTM based ima
 
 ![](Images/loss.png)
 Training Loss vs Epoch curve
+
 
 ![](Images/allBleu1.png)
 Soft-attention model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
@@ -80,10 +85,15 @@ Soft-attention model performance evaluation through the plot of BLEU-N score ver
 ![](Images/allBleu2.png)
 Show and Tell model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
 
+
 3. Hashtags generation using Multi-label image classification
 
 -- train2.py is used to generate hashtags using AlexNet implemented using Keras by running in tensorflow environment.
 -- The test data results, loss_epoch (train and validation), accuracy_epoch(train and validation) readings obtained after training and validation of the model are saved in the Multi-label image classification directory.
+
+![](Images/allBleu3.png)
+AlexNet model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
+
 
 4. Story generation using Character-level language model
 
