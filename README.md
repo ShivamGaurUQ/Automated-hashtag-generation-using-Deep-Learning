@@ -10,7 +10,7 @@
 
 1. First, generate hashtags for an input image by using soft-attention model.
 
-Attention mechanism focusses on important features of the image. The model takes an image I as input and produces a one-hot encoded list of hashtags denoted by X where |X| >= 1 and X = {x1, x2, x3, x4........, xN}, such that xi ∈ RK [3]. K is the size of the vocabulary and N is the number of hashtags generated for the image.
+Attention mechanism focusses on important features of the image. The model takes an image I as input and produces a one-hot encoded list of hashtags denoted by X where |X| >= 1 and X = {x1, x2, x3, x4........, xN}, such that xi ∈ RK. K is the size of the vocabulary and N is the number of hashtags generated for the image.
 
 ![](Images/hashtag_with_attention.png)
 
