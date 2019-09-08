@@ -21,7 +21,8 @@ Image features are extracted from lower CNN layers (ENCODER). The decoder uses a
 
 <p align="center"> 
 <img src="Images/encoder.png" width="500"> 
-Source: Adapted from [3]
+</p>
+<p align="center">Source: Adapted from [3]
 </p>
 
 
