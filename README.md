@@ -4,6 +4,10 @@
 3. More details about the project are included in the 'Overview_and_Results.pdf'
 
 # Methodology
+
+![](Images/hashtag_process.png)
+
+
 1. First, generate hashtags for an input image by using soft-attention model.
 
 Attention mechanism focusses on important features of the image. Image features are extracted from lower CNN layers (ENCODER). The decoder uses a LSTM that is responsible for producing a hashtag (one word) at each time step t, which is conditioned on a context vector zt, the previous hidden state ht and the previously generated hashtag. Soft attention mechanism is used to generate hashtags. 
