@@ -65,7 +65,7 @@ Performance of soft-attention model was compared with that of CNN-LSTM based ima
 ![](Images/loss.png)
 Training Loss vs Epoch curve
 
-![](Images/allBleu.png)
+![](Images/allBleu1.png)
 Soft-attention model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
 
 
