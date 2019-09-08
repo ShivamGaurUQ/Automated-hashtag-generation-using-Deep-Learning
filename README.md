@@ -62,7 +62,7 @@ Performance of soft-attention model was compared with that of CNN-LSTM based ima
 -- The test data results, loss_epoch, perplexity_epoch readings obtained from the after training the model are saved in the directory Show, attend and Tell (Soft Attention) directory.
 -- The model requires Keras, Tensorflow and Python 3.6 to train. The requirements can be installed in anaconda environment using environment_tensorflow.yaml
 
-![]()Images/loss.png)
+![](Images/loss.png)
 Training Loss vs Epoch curve
 
 
