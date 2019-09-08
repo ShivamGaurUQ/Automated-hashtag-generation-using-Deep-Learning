@@ -10,7 +10,11 @@
 
 1. First, generate hashtags for an input image by using soft-attention model.
 
-Attention mechanism focusses on important features of the image. Image features are extracted from lower CNN layers (ENCODER). The decoder uses a LSTM that is responsible for producing a hashtag (one word) at each time step t, which is conditioned on a context vector zt, the previous hidden state ht and the previously generated hashtag. Soft attention mechanism is used to generate hashtags. 
+Attention mechanism focusses on important features of the image. The model takes an image I as input and produces a one-hot encoded list of hashtags denoted by X where |X| >= 1 and X = {x1, x2, x3, x4........, xN}, such that xi ∈ RK [3]. K is the size of the vocabulary and N is the number of hashtags generated for the image.
+
+![](Images/hashtag_with_attention.png)
+
+Image features are extracted from lower CNN layers (ENCODER). The decoder uses a LSTM that is responsible for producing a hashtag (one word) at each time step t, which is conditioned on a context vector zt, the previous hidden state ht and the previously generated hashtag. Soft attention mechanism is used to generate hashtags. 
 
 The entire network was trained from end-to-end. InceptionV3 (pretrained on Imagenet) was used to classify images in the HARRISON dataset and features were extracted from the last convolutional layer.To generate hashtags, the CNN-LSTM model with embedding dimension size of 256, 512 GRU(LSTM) units and Adam optimizer was trained for 40 epochs on a GEForce GTX Titan GPU with each epoch taking about 2.5 hours.
 The model was trained on 80 percent of data (around 43K images) while the remaining was used for testing.
