@@ -26,6 +26,9 @@ The model was trained on 80 percent of data (around 43K images) while the remain
 
 2. Second, leverage the hashtag from previous stage to produce a short story by using a character-level language model.
 
+![](Images/charRnn.png)
+Source: Adapted from [6]
+
 The character - level RNN model is trained on ‘PersonaBank’ corpus which is a collection of 108 personal narratives from various weblogs. The corpus is described in the paper: PersonaBank: A Corpus of Personal Narratives and Their Story Intention Graphs (https://arxiv.org/abs/1708.09082). These stories cover a wide range of topics from romance and wildlife to travel and sports.
 Out of 108 stories, 55 are positive stories while the remaining are negative. Average length of story in the corpus is 269 words.
 
