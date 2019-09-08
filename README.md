@@ -7,10 +7,10 @@
 # Methodology
 
 ![](Images/hashtag_process.png)
-Source: Adapted from [3]
+<p align="center"> Source: Adapted from [3]</p>
 
 
-- First, generate hashtags for an input image by using soft-attention model.
+## 1. First, generate hashtags for an input image by using soft-attention model.
 
 Attention mechanism focusses on important features of the image. The model takes an image I as input and produces a one-hot encoded list of hashtags denoted by X where |X| >= 1 and X = {x1, x2, x3, x4........, xN}, such that xi ∈ RK [3]. K is the size of the vocabulary and N is the number of hashtags generated for the image.
 
@@ -20,20 +20,20 @@ Attention mechanism focusses on important features of the image. The model takes
 Image features are extracted from lower CNN layers (ENCODER). The decoder uses a LSTM that is responsible for producing a hashtag (one word) at each time step t, which is conditioned on a context vector zt, the previous hidden state ht and the previously generated hashtag. Soft attention mechanism is used to generate hashtags. 
 
 <img src="Images/encoder.png" width="500">
-Source: Adapted from [3]
+<p align="center"> Source: Adapted from [3]</p>
 
 
 The entire network was trained from end-to-end. InceptionV3 (pretrained on Imagenet) was used to classify images in the HARRISON dataset and features were extracted from the last convolutional layer.To generate hashtags, the CNN-LSTM model with embedding dimension size of 256, 512 GRU(LSTM) units and Adam optimizer was trained for 40 epochs on a GEForce GTX Titan GPU with each epoch taking about 2.5 hours.
 The model was trained on 80 percent of data (around 43K images) while the remaining was used for testing.
 
 ![](Images/train1..png)
-Summary of the training details for the soft-attention model used for hashtag generation.
+<p align="center"> Summary of the training details for the soft-attention model used for hashtag generation.</p>
 
 
-- Second, leverage the hashtag from previous stage to produce a short story by using a character-level language model.
+## 2. Second, leverage the hashtag from previous stage to produce a short story by using a character-level language model.
 
 ![](Images/charRnn.png)
-Source: Adapted from [6]
+<p align="center"> Source: Adapted from [6]</p>
 
 
 The RNN models the probability distribution of the characters in sequence given a sequence of previous characters [7].The hashtag generated in phase 1 is chosen as seed text and using the character sequences of this seed text, new characters are generated in sequence.The model is trained to generate narratives by adopting the writing style in the corpus using the hashtag.
@@ -46,8 +46,6 @@ The character - level RNN model is trained on ‘PersonaBank’ corpus which is 
 Out of 108 stories, 55 are positive stories while the remaining are negative. Average length of story in the corpus is 269 words.
 
 The language model is trained using a standard categorical cross-entropy loss.The language model was trained for 100 epochs with word embedding dimension size of 1024, 2 LSTM layers, softmax activation function, RMSProp optimizer and a learning rate of 0.01on a GEForce GTX Titan GPU to generate stories with 500 characters in length.
-
-
 
 
 
@@ -67,11 +65,11 @@ Performance of soft-attention model was compared with that of CNN-LSTM based ima
 - The model requires Keras, Tensorflow and Python 3.6 to train. The requirements can be installed in anaconda environment using environment_tensorflow.yaml
 
 ![](Images/loss.png)
-Training Loss vs Epoch curve
+<p align="center"> Training Loss vs Epoch curve </p>
 
 
 ![](Images/allBleu1.png)
-Soft-attention model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
+<p align="center"> Soft-attention model performance evaluation through the plot of BLEU-N score versus the images in the test dataset. </p>
 
 
 ## 2.  Hashtags generation using CNN-LSTM based model (Show and tell)(Pytorch)
@@ -83,7 +81,7 @@ Soft-attention model performance evaluation through the plot of BLEU-N score ver
 - Requires PyTorch setup which can be done by creating a pytorch environment using environment_pytorch.yaml
 
 ![](Images/allBleu2.png)
-Show and Tell model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
+<p align="center"> Show and Tell model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.</p>
 
 
 ## 3. Hashtags generation using Multi-label image classification
@@ -92,7 +90,7 @@ Show and Tell model performance evaluation through the plot of BLEU-N score vers
 - The test data results, loss_epoch (train and validation), accuracy_epoch(train and validation) readings obtained after training and validation of the model are saved in the Multi-label image classification directory.
 
 ![](Images/allBleu3.png)
-AlexNet model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
+<p align="center"> AlexNet model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.</p>
 
 
 ## 4. Story generation using Character-level language model
@@ -105,11 +103,11 @@ AlexNet model performance evaluation through the plot of BLEU-N score versus the
 # Results
 
 - ![](Images/Results1.png)
-  Examples of hashtags predicted by the soft-attention model.
+  <p align="center"> Examples of hashtags predicted by the soft-attention model.</p>
 
 - ![](Images/Results2.png)
 - ![](Images/Results3.png)
-  Examples of narrative captions generated from the hashtag.
+  <p align="center"> Examples of narrative captions generated from the hashtag.</p>
 
 
 # Performance on MS COCO dataset
@@ -117,7 +115,7 @@ AlexNet model performance evaluation through the plot of BLEU-N score versus the
 Though the main objective of this work is to use the soft-attention mechanism to generate hashtags and explore if it is possible to generate meaningful paragraph style captions for the image, it would not be a bad idea indeed to know how the model fairs in producing sentence level captions instead as originally the model was developed to generate sentence level captions. Hence, to evaluate this capability of the soft-attention mechanism, the model was trained on the popular MSCOCO dataset. The data was processed and trained in the same way as mentioned earlier. The only difference is that due to huge size of the MSCOCO dataset, the dataset size was reduced to 10000 images and the model was only trained for 5 epochs.
 
 - ![](Images/Results4.png)
-  Performance of soft-attention model on MSCOCO dataset.
+  <p align="center"> Performance of soft-attention model on MSCOCO dataset.</p>
 
 
 
