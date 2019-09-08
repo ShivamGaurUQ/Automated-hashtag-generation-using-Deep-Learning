@@ -112,6 +112,15 @@ Examples of hashtags predicted by the soft-attention model.
 Examples of narrative captions generated from the hashtag.
 
 
+# Performance on MS COCO dataset
+
+Though the main objective of this work is to use the soft-attention mechanism to generate hashtags and explore if it is possible to generate meaningful paragraph style captions for the image, it would not be a bad idea indeed to know how the model fairs in producing sentence level captions instead as originally the model was developed to generate sentence level captions. Hence, to evaluate this capability of the soft-attention mechanism, the model was trained on the popular MSCOCO dataset. The data was processed and trained in the same way as mentioned earlier. The only difference is that due to huge size of the MSCOCO dataset, the dataset size was reduced to 10000 images and the model was only trained for 5 epochs.
+
+![](Images/Results4.png)
+Performance of soft-attention model on MSCOCO dataset.
+
+
+
 # Publication
 
 The novel idea of story generation from the hashtags for the images was accepted and published in the 2019 IEEE 35th International Conference on Data Engineering Workshops (ICDEW). (https://ieeexplore.ieee.org/abstract/document/8750908 , DOI: 10.1109/ICDEW.2019.00060 ). Title of the paper: Generation of a Short Narrative Caption for an Image Using the Suggested Hashtag
