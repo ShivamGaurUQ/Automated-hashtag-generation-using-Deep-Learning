@@ -32,7 +32,7 @@ The model was trained on 80 percent of data (around 43K images) while the remain
 <p align="center"> Summary of the training details for the soft-attention model used for hashtag generation.</p>
 
 
-## 2. Second, leverage the hashtag from previous stage to produce a short story by using a character-level language model.
+## Second, leverage the hashtag from previous stage to produce a short story by using a character-level language model.
 
 ![](Images/charRnn.png)
 <p align="center"> Source: Adapted from [6]</p>
