@@ -65,6 +65,9 @@ Performance of soft-attention model was compared with that of CNN-LSTM based ima
 ![](Images/loss.png)
 Training Loss vs Epoch curve
 
+![](Images/allBleu.png)
+Soft-attention model performance evaluation through the plot of BLEU-N score versus the images in the test dataset.
+
 
 2.  Hashtags generation using CNN-LSTM based model (Show and tell)(Pytorch)
 
