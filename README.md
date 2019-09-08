@@ -107,6 +107,10 @@ AlexNet model performance evaluation through the plot of BLEU-N score versus the
 ![](Images/Results1.png)
 Examples of hashtags predicted by the soft-attention model.
 
+![](Images/Results2.png)
+![](Images/Results3.png)
+Examples of narrative captions generated from the hashtag.
+
 
 # Publication
 
