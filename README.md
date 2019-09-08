@@ -58,7 +58,7 @@ Performance of soft-attention model was compared with that of CNN-LSTM based ima
 ![](Images/bleu.png)
 
 
-## 1. Hashtags generation using soft-attention model (Show, attend and tell)(Tensorflow implementation)
+## 1. Hashtags generation using soft-attention model (Show, attend and tell)
 
 - Harrison dataset is used which is preprocessed and split into (80:10:10) train/validation/test ratio by preprocess.py file
 - Soft-attention model is trained using tensorflow_attention.py in the Show, attend and tell (Soft Attention) directory.
@@ -74,7 +74,7 @@ Performance of soft-attention model was compared with that of CNN-LSTM based ima
 <p align="center"> Soft-attention model performance evaluation through the plot of BLEU-N score versus the images in the test dataset. </p>
 
 
-## 2.  Hashtags generation using CNN-LSTM based model (Show and tell)(Pytorch)
+## 2.  Hashtags generation using CNN-LSTM based model (Show and tell)
 
 - Harrison dataset is used which is preprocessed and split into (80:10:10) train/validation/test ratio by preprocess.py file
 - CNN-LSTM model (defined in model.py) is used to train the model using train.py in the Show and tell directory.
@@ -104,11 +104,11 @@ Performance of soft-attention model was compared with that of CNN-LSTM based ima
 
 # Results
 
-- ![](Images/Results1.png)
+![](Images/Results1.png)
   <p align="center"> Examples of hashtags predicted by the soft-attention model.</p>
 
-- ![](Images/Results2.png)
-- ![](Images/Results3.png)
+![](Images/Results2.png)
+![](Images/Results3.png)
   <p align="center"> Examples of narrative captions generated from the hashtag.</p>
 
 
