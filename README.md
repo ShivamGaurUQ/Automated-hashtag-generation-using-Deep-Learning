@@ -128,18 +128,27 @@ The novel idea of story generation from the hashtags for the images was accepted
 
 # Flask Implementation
 
-# Get-'#'
+## Get-'#'
 
 - Web application in Flask to generate hashtags automatically for an image.
 - https://github.com/ShivamGaurUQ/Get-Hashtags.git
 - Implemented using Pytorch.
 
-# Steps to run the application:
+## Steps to run the application:
 - Download encoder and decoder (pre-trained model) and save all the files in the same directory.
 - Download pre-trained pytorch model from: https://drive.google.com/drive/folders/19t8S9wuBl2XZrnJbMB7oYtFoMBtDj-8g?usp=sharing
 
 - Run app.py.
 - Application will run on local server.
+
+## Some examples:
+
+<img src="images/img1.png" width="250" align="right"> 
+<img src="images/img2.png" width="250" align="right"> 
+<img src="images/img3.png" width="300" align="left"> 
+<img src="images/img4.png" width="300" align="left" margin-top="5px"> 
+
+
 
 
 # Conclusion & Future Work
