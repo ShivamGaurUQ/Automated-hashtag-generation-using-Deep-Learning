@@ -8,7 +8,7 @@ import nltk
 from PIL import Image
 from build_vocab import Vocabulary
 import ast
-#from pycocotools.coco import COCO
+
 
 
 class CocoDataset(data.Dataset):
