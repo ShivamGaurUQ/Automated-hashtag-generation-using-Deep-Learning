@@ -134,6 +134,14 @@ The novel idea of story generation from the hashtags for the images was accepted
 - https://github.com/ShivamGaurUQ/Get-Hashtags.git
 - Implemented using Pytorch.
 
+## Dependencies
+
+- Requires Python 3.6 or higher
+- Install Flask
+- Install pytorch
+- Use requirements.txt file to install all libraries and packages.
+
+
 ## Steps to run the application:
 - Download encoder and decoder (pre-trained model) and save all the files in the same directory.
 - Download pre-trained pytorch model from: https://drive.google.com/drive/folders/19t8S9wuBl2XZrnJbMB7oYtFoMBtDj-8g?usp=sharing
