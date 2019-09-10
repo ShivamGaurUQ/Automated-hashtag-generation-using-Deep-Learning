@@ -1,14 +1,8 @@
 
-# coding: utf-8
-
-# In[14]:
-
-
 import nltk
 import pickle
 import argparse
 from collections import Counter
-#from pycocotools.coco import COCO
 import ast
 
 
