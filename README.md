@@ -141,16 +141,6 @@ The novel idea of story generation from the hashtags for the images was accepted
 - Run app.py.
 - Application will run on local server.
 
-## Some examples:
-
-
-<img src="Images/img1.png" width="300" align="right"> 
-<img src="Images/img2.png" width="300" align="right"> 
-<img src="Images/img3.png" width="300" align="left"> 
-<img src="Images/img4.png" width="300" align="left"> 
-
-
-
 
 # Conclusion & Future Work
 
