@@ -1,18 +1,14 @@
 # Import TensorFlow and enable eager execution
 # This code requires TensorFlow version >=1.9
 from __future__ import absolute_import, division, print_function, unicode_literals
-#pip install tensorflow-gpu==2.0.0-alpha0
 import tensorflow as tf
 import numpy as np
 from keras.callbacks import History
-#keras.callbacks.History()
 import six
 import tensorflow as tf
 import time
 import os
-# We'll generate plots of attention in order to see which parts of an image
-# our model focuses on during captioning
-#import matplotlib.pyplot as plt
+
 
 # Scikit-learn includes many helpful utilities
 from sklearn.model_selection import train_test_split
@@ -35,8 +31,7 @@ config = tf.ConfigProto( device_count = {'GPU': 1} )
 sess = tf.Session(config=config) 
 keras.backend.set_session(sess)
 
-# We'll generate plots of attention in order to see which parts of an image
-# our model focuses on during captioning
+
 import matplotlib.pyplot as plt
 
 # Scikit-learn includes many helpful utilities
@@ -54,7 +49,7 @@ import pickle
 import nltk
 import argparse
 from collections import Counter
-#from pycocotools.coco import COCO
+
 import ast
 global SEEDTEXT
 def main():
@@ -70,41 +65,26 @@ def main():
     all_train_captions=[]
     ids = train_data.keys()
     for i, id in enumerate(ids):
-        #print("\ni and id {} , {}".format(i, id))
-        #print("\ntrain_data_key_val {}: {}".format(id, train_data[id]))
-        #print("\ncategory : {}".format(train_data[id][0]))
-        #print("\nimage name : {}".format(train_data[id][1]))
-        #print("\ncaption : {}".format(train_data[id][2]))
+        
         complete_path=train_img_path+train_data[id][0]+'_'+train_data[id][1]
         #print("\nimage path : {}".format(complete_path))
         all_train_img_paths.append(complete_path)
         caption='<start> '+train_data[id][2]+' <end>'
         all_train_captions.append(caption)
-
-    #print(len(all_train_img_paths))
-    #print(len(all_train_captions))
     
     
     with open(val_captions_path, "r") as vdata:
             val_data = ast.literal_eval(vdata.read())
     counter = Counter()
-    #all_val_img_paths=[]
-    #all_val_captions=[]
+    
     vids = val_data.keys()
     for i, id in enumerate(vids):
-        #print("\ni and id {} , {}".format(i, id))
-        #print("\nval_data_key_val {}: {}".format(id, val_data[id]))
-        #print("\ncategory : {}".format(val_data[id][0]))
-        #print("\nimage name : {}".format(val_data[id][1]))
-        #print("\ncaption : {}".format(val_data[id][2]))
+        
         complete_path=val_img_path+val_data[id][0]+'_'+val_data[id][1]
-        #print("\nimage path : {}".format(complete_path))
+        
         all_train_img_paths.append(complete_path)
         caption='<start> '+val_data[id][2]+' <end>'
         all_train_captions.append(caption)
-
-    #print(len(all_train_img_paths))
-    #print(len(all_train_captions))
     
       
     train_captions=all_train_captions
@@ -476,37 +456,7 @@ def main():
         attention_plot = attention_plot[:len(result), :]
         return result, attention_plot    
         
-        
-        
-        
-        
-   
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
     test_captions_path='/media/raid6/shivam/imagecaption/data/test_data.txt'
     #val_captions_path='/media/raid6/shivam/imagecaption/data/val_data.txt'
     
@@ -555,31 +505,6 @@ def main():
     
     save_in_file.close()
     
-
-      
-      
-      
-      
-      
-         
-      
-      
-      
-      
-  
-  
-      
-  
-      
-        
-        
-        
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
