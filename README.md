@@ -149,7 +149,7 @@ The novel idea of story generation from the hashtags for the images was accepted
 <img src="Images/img4.png" width="300" align="left"> 
 
 
-
+<br>
 
 # Conclusion & Future Work
 
@@ -162,6 +162,7 @@ Another objective of the work was to explore the possibility of using hashtags t
 As mentioned earlier the work is far enough from meeting the high expectations, but lessons learnt while implementing the work are precious and will form the base to incorporate improvements in the future. One of the most important lessons learnt is that without image attributes, it is not easy to produce narrative captions that can match the context of the image. For example, one useful approach can use image features extracted from CNN during the process of story generation with word-level language model instead of the character-level language model. Another useful technique would be to use skip-thought vectors, which uses an encoder to encode sentences and then the decoder predicts the previous and next sentence based on the input sentence. Generating sentences in such a way helps in producing highly contextual and meaningful text.
 
 </p>
+</br>
 
 # References
 
