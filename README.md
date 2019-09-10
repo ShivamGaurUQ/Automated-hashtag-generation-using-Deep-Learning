@@ -144,10 +144,10 @@ The novel idea of story generation from the hashtags for the images was accepted
 ## Some examples:
 
 
-<img src="Images/img1.png" width="250" align="center"> 
-<img src="Images/img2.png" width="250" align="center"> 
-<img src="Images/img3.png" width="300" align="center"> 
-<img src="Images/img4.png" width="300" align="center"> 
+<img src="Images/img1.png" width="300" align="right"> 
+<img src="Images/img2.png" width="300" align="right"> 
+<img src="Images/img3.png" width="300" align="left"> 
+<img src="Images/img4.png" width="300" align="left"> 
 
 
 
