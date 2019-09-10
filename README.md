@@ -126,6 +126,20 @@ Though the main objective of this work is to use the soft-attention mechanism to
 
 The novel idea of story generation from the hashtags for the images was accepted and published in the 2019 IEEE 35th International Conference on Data Engineering Workshops (ICDEW). (https://ieeexplore.ieee.org/abstract/document/8750908 , DOI: 10.1109/ICDEW.2019.00060 ). Title of the paper: Generation of a Short Narrative Caption for an Image Using the Suggested Hashtag
 
+# Flask Implementation
+
+# Get-'#'
+
+- Web application in Flask to generate hashtags automatically for an image
+- Implemented using Pytorch.
+
+# Steps to run the application:
+- Download encoder and decoder (pre-trained model) and save all the files in the same directory.
+- Download pre-trained pytorch model from: https://drive.google.com/drive/folders/19t8S9wuBl2XZrnJbMB7oYtFoMBtDj-8g?usp=sharing
+
+- Run app.py
+
+
 # Conclusion & Future Work
 
 <p align="center">
